@@ -1,0 +1,63 @@
+﻿{
+  "AppPlatForm": [
+    {
+      "AppID": 2,
+      "App": "android",
+      "Styles": { "1" : "Style1-基本款", "2": "Style2-基本款+左側圖", "3" : "Style3-單圖小Banner", "4" : "Style 4-基本款+Banner" },
+      "Types": { "1" : "官方" ,"2" : "個人", "3" : "活動" }
+    },
+    {
+      "AppID": 1,
+      "App": "ios",
+            "Styles": { "1" : "Style1-基本款"},
+            "Types": { "1" : "官方" ,"2" : "個人", "3" : "活動" }
+    }
+  ],
+
+  "Styles": [
+    {
+      "styleID": 1,
+      "showTite": "style1",
+      "content": true,
+      "banner": false,
+      "icon": false
+    },
+    {
+      "styleID": 2,
+      "showTite": "style2",
+      "content": true,
+      "banner": false,
+      "icon": true
+    },
+    {
+      "styleID": 3,
+      "showTite": "style3",
+      "content":false,
+      "banner": true,
+      "icon": false
+    },
+    {
+      "styleID": 4,
+      "showTite": "style4",
+      "content":true,
+      "banner": true,
+      "icon": false
+    }
+  ],
+
+  "Types": [
+    {
+      "type": 1,
+      "showTite": "官方"
+    },
+    {
+      "type": 2,
+      "showTite": "個人"
+    },
+    {
+      "type": 3,
+      "showTite": "活動 "
+    }
+  ]
+
+}

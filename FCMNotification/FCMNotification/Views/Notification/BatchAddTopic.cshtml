@@ -1,0 +1,60 @@
+﻿@model FCMNotification.Models.NotificationModels
+@{
+}
+
+<h2>批次新增主題</h2>
+
+<html>
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/Notification.js"></script>
+    <style>
+        #main {
+              margin: 0 auto; 
+            }
+    </style>
+</head>
+<body>
+
+    @using (Html.BeginForm("BatchAddTopic", "Notification", FormMethod.Post))
+    {
+        <div>
+            <div class="form-group">
+                <div>
+                    <button type="submit" class="btn btn-default">發送</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">伺服器金鑰</label>
+                    @Html.TextBoxFor(x => x.Authorization, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" id="ByTopic">
+                    <label class="col-sm-2 control-label">主題</label>
+                    @Html.TextBoxFor(x => x.Topics, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">註冊Token</label>
+                    @Html.TextAreaFor(x => x.RegistrationToken, new { @class = "form-control ", rows = "10" })
+                    <label class="col-sm-2 control-label"></label>
+                    請使用" , "做區隔
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">回傳訊息</label><br>
+                    <div id="FormatResult"></div>
+                </div>
+                <div id="FCMResult" style="display:none">@Html.Raw(Model.SendResponse)</div>
+            </div>
+        </div>
+    }
+</body>
+
+</html>

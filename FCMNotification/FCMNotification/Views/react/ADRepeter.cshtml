@@ -1,0 +1,26 @@
+﻿using System.Web.Optimization.React;
+@model FCMNotification.Models.Rootobject
+@{
+    ViewBag.Title = "ADRepeter";
+}
+
+<h2>ADRepeter</h2>
+
+<html>
+<head>
+    <script src="https://npmcdn.com/react@15.3.0/dist/react-with-addons.min.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script>
+        @Scripts.Render("~/bundles/lib")
+        @Scripts.Render("~/bundles/AD")
+</head>
+<body>
+    <div id="content"></div>
+    @Html.React("LikeButton", new { }, containerId: "HobbyDIV", containerClass: "", clientOnly: true)
+    
+    @Html.ReactInitJavaScript()
+    @*@Html.React("ADTable", new
+        {
+            initialComments = ViewBag.Response
+        }, containerId: "ADTable", containerClass: "", clientOnly: false)*@
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿using System.Web.Optimization.React;
+@model FCMNotification.Models.Rootobject
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+    <style>
+        .rcorners2 {
+            background-color: #82FF82;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .DIVBorder {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        .test2 {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+
+
+    <script src="https://fb.me/react-15.0.1.js"></script>
+    <script src="https://fb.me/react-dom-15.0.1.js"></script>
+    <script src="https://npmcdn.com/react@15.3.0/dist/react-with-addons.min.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script>
+
+    @Scripts.Render("~/bundles/lib")
+    @Scripts.Render("~/bundles/main")
+    @Scripts.Render("~/bundles/reflux")
+</head>
+<body>
+
+    <div id="container">
+    </div>
+
+
+    @*@Html.React("CommentsBox", new
+        {
+            initialComments = ViewBag.Response
+        })*@
+
+
+    @Html.React("HobbyDIV", new { }, containerId: "HobbyDIV", containerClass: "", clientOnly: true)
+    @Html.React("UserDIV", new { }, containerId: "UserDIV", containerClass: "", clientOnly: true)
+        @Html.React("TodoComponent", new { }, containerId: "TodoComponent", containerClass: "", clientOnly: true)
+        @Html.React("TodoComponent2", new { }, containerId: "TodoComponent2", containerClass: "", clientOnly: true)
+
+    @Html.ReactInitJavaScript()
+
+    <div class="col-md-4"></div>
+    @*@Html.React("UserDIV", new { }, containerId: "UserDIV", containerClass: "")*@
+
+    @*<div>@ViewBag.Response</div>*@
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model FCMNotification.Models.PushMsgModels
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Scripts.Render("~/bundles/jquery")
+
+@Html.DropDownList("AppList", (SelectList)ViewBag.AppPlatFormList)
+
+@Html.DropDownList("Styles", (SelectList)ViewBag.Styles)
+
+@Html.DropDownList("Styles", (SelectList)ViewBag.Types)
+title <input id="title" name="title"/>
+content <input id="content" name="content"/>
+banner <input id="banner" name="banner"/>
+
+<script type="text/javascript">
+
+</script>

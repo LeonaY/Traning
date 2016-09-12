@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCMNotification", "FCMNotification\FCMNotification.csproj", "{11F74D84-C1C6-4A8B-AA5F-0CEFE46B4ED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraningAPI", "TraningAPI\TraningAPI.csproj", "{EAA4F368-570E-47D4-9464-651F5656EDBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForm", "WebForm\WebForm.csproj", "{01585547-ADDD-4C4A-BF6A-9BD315455096}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11F74D84-C1C6-4A8B-AA5F-0CEFE46B4ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F74D84-C1C6-4A8B-AA5F-0CEFE46B4ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F74D84-C1C6-4A8B-AA5F-0CEFE46B4ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F74D84-C1C6-4A8B-AA5F-0CEFE46B4ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA4F368-570E-47D4-9464-651F5656EDBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA4F368-570E-47D4-9464-651F5656EDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA4F368-570E-47D4-9464-651F5656EDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA4F368-570E-47D4-9464-651F5656EDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01585547-ADDD-4C4A-BF6A-9BD315455096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01585547-ADDD-4C4A-BF6A-9BD315455096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01585547-ADDD-4C4A-BF6A-9BD315455096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01585547-ADDD-4C4A-BF6A-9BD315455096}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

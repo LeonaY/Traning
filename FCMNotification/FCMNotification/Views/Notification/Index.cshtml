@@ -1,0 +1,63 @@
+﻿@model FCMNotification.Models.NotificationModels
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>推播</h2>
+
+<html>
+<head>
+            @Styles.Render("~/Content/css")
+            @Scripts.Render("~/bundles/jquery")
+        <script src="~/Scripts/Notification.js"></script>
+</head>
+<body>
+
+    @using (Html.BeginForm("Index", "Notification", FormMethod.Post))
+    {
+        <form  class="form-horizontal">
+            <div class="form-group">
+                <div>
+                    <button type="submit" class="btn btn-default">發送</button>
+                </div>IsByTokenDiv
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">伺服器金鑰</label>
+                @Html.TextBoxFor(x => x.Authorization, new { @class="form-control"})
+            </div>
+            <div id="IsByTokenDiv" class="form-group">
+                <label  class="col-sm-2 control-label">目標</label>
+                <div>
+                    @Html.RadioButtonFor(m => m.IsByToken, true, new { @class = "ByTokenChange "})
+                    單一裝置
+                    @Html.RadioButtonFor(m => m.IsByToken, false, new { @class = "ByTokenChange" })
+                    主題
+                </div>
+            </div>
+            <div class="form-group" id="ByToken">
+                <label  class="col-sm-2 control-label">單一裝置</label>
+                @Html.TextBoxFor(x => x.RegistrationToken, new { @class = "form-control" })
+            </div>
+            <div class="form-group"  id="ByTopic" style="display:none">
+                <label  class="col-sm-2 control-label">主題</label>
+                @Html.TextBoxFor(x => x.Topics, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">推播標題</label>
+                @Html.TextBoxFor(x => x.SendTitle, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">推播訊息</label>
+                @Html.TextBoxFor(x => x.SendMsg, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">回傳訊息</label><br>
+            <div id="FormatResult"></div>
+            </div>           
+             <div id="FCMResult" style="display:none">@Html.Raw(Model.SendResponse)</div>
+        </form>
+    }
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+﻿@model FCMNotification.Models.NotificationModels
+@{
+}
+
+<h2>註冊APNs</h2>
+
+<html>
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    <style>
+        #main {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    @using (Html.BeginForm("GetConverAPNS", "Notification", FormMethod.Post))
+    {
+        <div>
+            <div class="form-group">
+                <div>
+                    <button type="submit" class="btn btn-default">發送</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">伺服器金鑰</label>
+                    @Html.TextBoxFor(x => x.Authorization, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">註冊應用程式名</label>
+                    @Html.TextBoxFor(x => x.application, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">SandBox</label>
+                    @Html.CheckBoxFor(x => x.IsSandBox)
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" id="ByTopic">
+                    <label class="col-sm-2 control-label">註冊Token</label>
+                    @Html.TextAreaFor(x => x.RegistrationToken, new { @class = "form-control", rows = "2" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">回傳訊息</label><br>
+                    <div id="FormatResult"></div>
+                </div>
+                <div id="FCMResult" style="display:none">@Html.Raw(Model.SendResponse)</div>
+            </div>
+        </div>
+    }
+</body>
+
+</html>
